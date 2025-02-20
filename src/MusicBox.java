@@ -17,6 +17,7 @@ public class MusicBox {
         this.songID = songID;
         this.isSongPremium = premiumSong;
         this.songArtists = artists;
+        this.songMusicLabel = label;
         
         // -- TODO
         /* Initialise  the rest of the variables in this Constructor block*/
@@ -35,7 +36,9 @@ public class MusicBox {
     public char getPremiumSong() {
         return isSongPremium;
     }
-
+    public String getsongMusicLabel() {
+        return songMusicLabel;
+    }
     // -- TODO
         /* Create the rest of "getters" for the remaining variables */
     
