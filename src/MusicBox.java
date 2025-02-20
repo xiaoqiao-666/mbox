@@ -36,6 +36,7 @@ public class MusicBox {
     public char getPremiumSong() {
         return isSongPremium;
     }
+    
     public String getsongMusicLabel() {
         return songMusicLabel;
     }
