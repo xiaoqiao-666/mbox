@@ -14,6 +14,12 @@ public class Main{
         System.out.println("Now playing the song");
         mbox2.playSong(mbox2.getSongID(), mbox2.getPremiumSong(), 1);
         
+        // Create another MusicBox object with different parameters
+        MusicBox mbox3 = new MusicBox("A12BC34", 'N', "Sunshine", "Bright",
+        "Sunny days ahead", "Pop", "Sunshine Music", "Sunny Tunes");
+
+        System.out.println("Now playing the song");
+        mbox3.playSong(mbox3.getSongID(), mbox3.getPremiumSong(), 1);
         /* Repeat the above code to create another object  
          * Pass different parameters to the MusicBox constructor, but initialise premiumSong to N and when calling the
          * playSong method, pass ads parameter as just 1
