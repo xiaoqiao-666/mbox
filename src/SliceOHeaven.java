@@ -1,25 +1,18 @@
-import java.util.HashMap;
-import java.util.Map;
-
 public class SliceOHeaven {
     public String storeName = "Slice-o-Heaven";
     public String storeAddress = "666 Pizza Avenue, Cheese City";
     public String storeEmail = "order@sliceoheaven.com";
     public String storePhone = "(666) 888-9999";
 
-    private final String DEF_ORDER_ID = "DEF-SOH-099";
-    private final String DEF_PIZZA_INGREDIENTS = "Mozzarella Cheese";
-    private final double DEF_ORDER_TOTAL = 15.00;
+    private  String DEF_ORDER_ID = "DEF-SOH-099";
+    private  String DEF_PIZZA_INGREDIENTS = "Mozzarella Cheese";
+    private  double DEF_ORDER_TOTAL = 15.00;
 
     private String orderID;
     private String orderDetails;
     private double orderTotal;
 
-    private Map<String, Double> pizzaMenu = new HashMap<>();
-    private Map<String, String> pizzaIngredients = new HashMap<>();
-    private Map<String, Double> sides = new HashMap<>();
-    private Map<String, Double> drinks = new HashMap<>();
-
+    
     private double calculateTotal(String orderDetails) {
         return 15.00;
     }
@@ -29,18 +22,7 @@ public class SliceOHeaven {
         this.orderDetails = DEF_PIZZA_INGREDIENTS;
         this.orderTotal = DEF_ORDER_TOTAL;
 
-        pizzaMenu.put("Margherita Pizza", 12.99);
-        pizzaMenu.put("Pepperoni Pizza", 14.99);
-        pizzaMenu.put("Veggie Pizza", 13.99);
-
-        pizzaIngredients.put("Margherita Pizza", "Tomato Sauce, Mozzarella, Basil");
-        pizzaIngredients.put("Pepperoni Pizza", "Tomato Sauce, Mozzarella, Pepperoni");
-        pizzaIngredients.put("Veggie Pizza", "Tomato Sauce, Mozzarella, Mushrooms, Bell Peppers");
-
-        sides.put("Garlic Bread", 4.99);
-        sides.put("Cheese Sticks", 5.99);
-        drinks.put("Coke", 2.99);
-        drinks.put("Sprite", 2.99);
+       
     }
 
     public SliceOHeaven(String orderID, String orderDetails, double orderTotal) {
@@ -83,7 +65,9 @@ public class SliceOHeaven {
     }
 
     private void makePizza() {
-        // Implementation for making pizza
+        System.out.println("Making pizza...");
+        System.out.println("Baking pizza...");
+        System.out.println("Pizza ready for delivery!");
     }
 
     private void printReceipt() {
