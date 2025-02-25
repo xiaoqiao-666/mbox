@@ -22,7 +22,7 @@ public class SliceOHeaven {
         this.orderDetails = DEF_PIZZA_INGREDIENTS;
         this.orderTotal = DEF_ORDER_TOTAL;
 
-       
+        System.out.println("Welcome to " + storeName + "!");  
     }
 
     public SliceOHeaven(String orderID, String orderDetails, double orderTotal) {
