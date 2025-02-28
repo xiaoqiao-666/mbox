@@ -64,12 +64,7 @@ public class SliceOHeaven {
         printReceipt();
     }
 
-    private void makePizza() {
-        System.out.println("Making pizza...");
-        System.out.println("Baking pizza...");
-        System.out.println("Pizza ready for delivery!");
-    }
-
+    
     private void printReceipt() {
         System.out.println("\n======== RECEIPT ========");
         System.out.println("Order ID: " + orderID);
@@ -80,4 +75,36 @@ public class SliceOHeaven {
         System.out.println("Thank you for choosing " + storeName + "!");
         System.out.println("========================");
     }
+    private void makePizza() {
+        System.out.println("Making pizza...");
+        System.out.println("Baking pizza...");
+        System.out.println("Pizza ready for delivery!");
+    }
+    public void processCardPayment(String cardNumber, String expiryDate, int cvv) {
+        int cardLength = cardNumber.length();
+        if (cardLength == 14) {
+            System.out.println("Card accepted");
+        } else {
+            System.out.println("Invalid card");
+        }
+
+        String blacklistedNumber = "21234567890876";
+        if (cardNumber.equals(blacklistedNumber)) {
+            System.out.println("Card is blacklisted. Please use another card");
+            return;
+        }
+
+        String cardNumberToDisplay = cardNumber.charAt(0) + "*".repeat(cardLength - 5) + cardNumber.substring(cardLength - 4);
+        System.out.println("Card Number: " + cardNumberToDisplay);
+        System.out.println("Expiry Date: " + expiryDate);
+        System.out.println("CVV: " + cvv);
+    }
+    public void specialOfTheDay(String pizzaOfTheDay, String sideOfTheDay, String specialPrice) {
+        StringBuilder special = new StringBuilder();
+        special.append("Pizza of the Day: ").append(pizzaOfTheDay).append("\n");
+        special.append("Side of the Day: ").append(sideOfTheDay).append("\n");
+        special.append("Special Price: ").append(specialPrice).append("\n");
+        System.out.println(special.toString());
+    }
+   
 }
