@@ -63,7 +63,11 @@ public class SliceOHeaven {
         makePizza();
         printReceipt();
     }
-
+    private void makePizza() {
+        System.out.println("Making pizza...");
+        System.out.println("Baking pizza...");
+        System.out.println("Pizza ready for delivery!");
+    }
     
     private void printReceipt() {
         System.out.println("\n======== RECEIPT ========");
@@ -75,11 +79,7 @@ public class SliceOHeaven {
         System.out.println("Thank you for choosing " + storeName + "!");
         System.out.println("========================");
     }
-    private void makePizza() {
-        System.out.println("Making pizza...");
-        System.out.println("Baking pizza...");
-        System.out.println("Pizza ready for delivery!");
-    }
+   
     public void processCardPayment(String cardNumber, String expiryDate, int cvv) {
         int cardLength = cardNumber.length();
         if (cardLength == 14) {
