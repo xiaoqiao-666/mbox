@@ -105,6 +105,5 @@ public class SliceOHeaven {
         special.append("Side of the Day: ").append(sideOfTheDay).append("\n");
         special.append("Special Price: ").append(specialPrice).append("\n");
         System.out.println(special.toString());
-    }
-   
+    } 
 }
