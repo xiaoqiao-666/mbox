@@ -114,7 +114,7 @@ public class SliceOHeaven {
     }
 
     private void makeCardPayment() {
-        try (Scanner scanner = new Scanner(System.in)) {
+        Scanner scanner = new Scanner(System.in) ;
 
         System.out.println("Enter your card number:");
         long cardNumber = scanner.nextLong();
@@ -126,7 +126,7 @@ public class SliceOHeaven {
         int cvv = scanner.nextInt();
 
         processCardPayment(cardNumber, expiryDate, cvv);
-        }
+        scanner.close();
     }
 
     public void processCardPayment(long cardNumber, String expiryDate, int cvv) {
